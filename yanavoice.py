@@ -158,7 +158,8 @@ else:
 banner("Connecting to " + url_begin + ip + "/" +url)
 
 #Building URL to query commands
-command_list_commands = url_begin+ip+"/"+url+"/action.php?action="+command+"&token="+token
+command_list_commands = url_begin+ip+"/"
+command_list_commandsurl+"/action.php?action="+command+"&token="+token              # Chez moi sous ubuntu en 2 lignes sa passe mieux 
 try:
 	json_commands = urllib2.urlopen(command_list_commands).read() #Put all the command in an list
 #Handle invalid IP
